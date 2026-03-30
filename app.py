@@ -18,12 +18,14 @@ def predict():
         data = request.json
 
         # get input
+        
         soil_moisture = float(data['soil_moisture'])
+        soil_humidity=float(data['soil_humidity'])
         temperature = float(data['temperature'])
         humidity = float(data['humidity'])
 
         # IMPORTANT: same order as training
-        features = np.array([[soil_moisture, temperature, humidity]])
+        features = np.array([[soil_moisture,soil_humidity,temperature, humidity]])
 
         # scale
         features = scaler.transform(features)
