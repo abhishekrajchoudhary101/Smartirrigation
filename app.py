@@ -19,8 +19,8 @@ def predict():
 
         # get input
         
-        soil_moisture = float(data['soil_moisture'])
-        soil_humidity=float(data['soil_humidity'])
+        soil_moisture = float(data['soil_moisture'])-60.00
+        soil_humidity=float(data['soil_humidity'])-60.00
         temperature = float(data['temperature'])
         humidity = float(data['humidity'])
 
